@@ -14,12 +14,15 @@ def min_search(arr: Sequence) -> int:
     """
     minimal = arr[0]
     min_index = 0
-    for i in range(len(arr)):
-        if arr[i] < minimal:
-            minimal = arr[i]
-            min_index = i
-    print(arr)
-    return min_index
+    try:
+        for i in range(len(arr)):
+            if arr[i] < minimal:
+                minimal = arr[i]
+                min_index = i
+        print(arr)
+        return min_index
+    except IndexError:
+        pass
 
 
     # elem = arr[0]
